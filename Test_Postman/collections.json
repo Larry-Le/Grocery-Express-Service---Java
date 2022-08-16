@@ -1,0 +1,761 @@
+{
+	"info": {
+		"_postman_id": "0337548a-f09b-469b-984e-71e3cd7c3d7f",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Generate JWT (/api/login)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "Jing",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Greetings (/hello)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make_store (/store/addstore)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqaW0iLCJyb2xlcyI6WyJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJleHAiOjE2Mzg4MTUyMTl9.GUXQ-ACjk-ZJ_XkhEEBZgc4ETdSOdPP02yjpBN2Xzu4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/store/addstore?name=fresh_market&rev=57000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"store",
+						"addstore"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "fresh_market"
+						},
+						{
+							"key": "rev",
+							"value": "57000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "display_stores (/stores)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/stores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sell_item (/item/additem)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqaW0iLCJyb2xlcyI6WyJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJleHAiOjE2Mzg4MTUyMTl9.GUXQ-ACjk-ZJ_XkhEEBZgc4ETdSOdPP02yjpBN2Xzu4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/item/additem?storeName=fresh_market&itemName=bacon&weight=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"item",
+						"additem"
+					],
+					"query": [
+						{
+							"key": "storeName",
+							"value": "fresh_market"
+						},
+						{
+							"key": "itemName",
+							"value": "bacon"
+						},
+						{
+							"key": "weight",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "display_items (/items)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/items?storeName=fresh_market",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"items"
+					],
+					"query": [
+						{
+							"key": "storeName",
+							"value": "fresh_market"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make_pilot (/pilot/addpilot)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pilot/addpilot?account=alan2&firstName=Alan&lastName=Alexander&phoneNumber=111-111-1111&taxId=111-11-1111&licenseId=lic_2&deliveries=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pilot",
+						"addpilot"
+					],
+					"query": [
+						{
+							"key": "account",
+							"value": "alan2"
+						},
+						{
+							"key": "firstName",
+							"value": "Alan"
+						},
+						{
+							"key": "lastName",
+							"value": "Alexander"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "111-111-1111"
+						},
+						{
+							"key": "taxId",
+							"value": "111-11-1111"
+						},
+						{
+							"key": "licenseId",
+							"value": "lic_2"
+						},
+						{
+							"key": "deliveries",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "display_pilots (/pilots)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pilots",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pilots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make_drone (/drone/adddrone)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/drone/adddrone?storeName=fresh_market&droneId=1&capacity=50&tripLeft=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drone",
+						"adddrone"
+					],
+					"query": [
+						{
+							"key": "storeName",
+							"value": "fresh_market"
+						},
+						{
+							"key": "droneId",
+							"value": "1"
+						},
+						{
+							"key": "capacity",
+							"value": "50"
+						},
+						{
+							"key": "tripLeft",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "display_drones (/drones)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/drones?storeName=fresh_market",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drones"
+					],
+					"query": [
+						{
+							"key": "storeName",
+							"value": "fresh_market"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fly_drone (/fly_drone/assignpilot)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fly_drone/assignpilot?storeName=fresh_market&droneId=1&pilotAcc=alan2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fly_drone",
+						"assignpilot"
+					],
+					"query": [
+						{
+							"key": "storeName",
+							"value": "fresh_market"
+						},
+						{
+							"key": "droneId",
+							"value": "1"
+						},
+						{
+							"key": "pilotAcc",
+							"value": "alan2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make_customer (/customers/addcustomer)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/addcustomer?account=carli2&firstName=Chanel&lastName=Cortez&phoneNumber=666-666-6666&rating=4&credits=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"addcustomer"
+					],
+					"query": [
+						{
+							"key": "account",
+							"value": "carli2"
+						},
+						{
+							"key": "firstName",
+							"value": "Chanel"
+						},
+						{
+							"key": "lastName",
+							"value": "Cortez"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "666-666-6666"
+						},
+						{
+							"key": "rating",
+							"value": "4"
+						},
+						{
+							"key": "credits",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "display_customers (/customers)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "start_order (/order/addorder)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order/addorder?storeName=fresh_market&orderId=ordA&droneId=1&customerId=carli2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"addorder"
+					],
+					"query": [
+						{
+							"key": "storeName",
+							"value": "fresh_market"
+						},
+						{
+							"key": "orderId",
+							"value": "ordA"
+						},
+						{
+							"key": "droneId",
+							"value": "1"
+						},
+						{
+							"key": "customerId",
+							"value": "carli2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request_item (/order/request)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order/request?storeName=fresh_market&orderId=ordA&itemName=bacon&quantity=3&unitP=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"request"
+					],
+					"query": [
+						{
+							"key": "storeName",
+							"value": "fresh_market"
+						},
+						{
+							"key": "orderId",
+							"value": "ordA"
+						},
+						{
+							"key": "itemName",
+							"value": "bacon"
+						},
+						{
+							"key": "quantity",
+							"value": "3"
+						},
+						{
+							"key": "unitP",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dispaly_orders (/orders)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsZW8iLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwaS9sb2dpbiIsImV4cCI6MTYzODc0MzQxM30.dy9ftWkoBwPylSwTRcOO4XLsXRjJ0nXW3Cbq93l2D0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders?storeName=fresh_market",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "storeName",
+							"value": "fresh_market"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purchase_order (/order/purchase)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKaW5nIiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfQ1VTVE9NRVIiLCJST0xFX0VNUExPWUVFIiwiUk9MRV9TVVBFUl9BRE1JTiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2xvZ2luIiwiZXhwIjoxNjM4ODEwNjA4fQ.swR02ZQn1ozSSSLC6yWhRHwM8sjxZNJR6Lx4jwq5KTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order/purchase?storeName=fresh_market&orderId=ordA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"purchase"
+					],
+					"query": [
+						{
+							"key": "storeName",
+							"value": "fresh_market"
+						},
+						{
+							"key": "orderId",
+							"value": "ordA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel_order (order/cancelOrder)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqaW0iLCJyb2xlcyI6WyJST0xFX0VNUExPWUVFIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJleHAiOjE2Mzg4MTI5NjB9.FpOOzZWczdiRYTEGC8Ipg7RKwSP0YxgTsSDpyWqoxI8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order/cancelOrder?storeName&orderId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"cancelOrder"
+					],
+					"query": [
+						{
+							"key": "storeName",
+							"value": null
+						},
+						{
+							"key": "orderId",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save user (/api/user/save)",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKaW5nIiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfQ1VTVE9NRVIiLCJST0xFX0VNUExPWUVFIiwiUk9MRV9TVVBFUl9BRE1JTiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2xvZ2luIiwiZXhwIjoxNjM4ODM2Mzc4fQ.uuOYlktH99cl_TBiUBmoBQWEOkgZtfalgKe8hWjZGLM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsZW8iLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwaS9sb2dpbiIsImV4cCI6MTYzODYzNjg0NX0.mVZv57DTp6f3efX1MYx8ZwAO5v67brRLboZr0jbD1F0",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sa ben\",\r\n    \"username\":\"Sa\",\r\n    \"password\":\"1234\",\r\n    \"roles\":[\r\n    \r\n    ]\r\n  \r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dispaly users (api/users)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKaW5nIiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfU1VQRVJfQURNSU4iLCJST0xFX1VTRVIiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwaS9sb2dpbiIsImV4cCI6MTYzODcyMTgxNX0.e5PvKm5NoSDis0ysjHP7Rl0XRxEyKvyk01HVdZBMvaE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsZW8iLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2xvZ2luIiwiZXhwIjoxNjM4NjM4MDQ1fQ.Hlwy5lokMUcb_l_4CB3_gQwnK8NVcD2WsXqjnEE-9sU",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllOrderByUserID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/userid?userId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"userid"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

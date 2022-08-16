@@ -1,0 +1,6 @@
+Dear professor:
+
+We truly apologize the inconvenience for you to test our assignment. Please import the collections.json to the postman web application for application testing. Thanks for your patience. 
+
+Best regards,
+Group 57 
